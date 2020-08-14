@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo random canvas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chart">
+        <canvas class="chart__canvas" id="chart" width="1000" height="500">
+            Sorry, your browser dont support this technology. Please, update your browser.
+        </canvas>
+        <form class="chart__parameters">
+            <label class="chart__label" for="min-points"> Min points:</label>
+            <input class="chart__input" type="number" id="min-points" value="2" min="2" max="100">
+            <label class="chart__label" for="max-points">Max points:</label>
+            <input class="chart__input" type="number" id="max-points" value="10" min="2" max="100">
+            <label class="chart__label" for="steps">Smoothness:</label>
+            <input class="chart__input" type="number" id="steps" value="30" min="1" max="300">
+            <label class="chart__label" for="time">Time (ms):</label>
+            <input class="chart__input" type="number" id="time" value="900" min="1" max="10000">
+            <button type="submit">Set parameters</button>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
