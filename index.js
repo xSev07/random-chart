@@ -100,8 +100,8 @@ const renderAxis = (ctx) => {
     ctx.fillStyle= 'black';
     ctx.beginPath();
     ctx.moveTo(AXIS_PADDING, AXIS_PADDING);
-    ctx.lineTo(AXIS_PADDING, canvasElement.height - AXIS_PADDING);
-    ctx.lineTo(canvasElement.width - AXIS_PADDING, canvasElement.height - AXIS_PADDING);
+    ctx.lineTo(AXIS_PADDING, ctx.canvas.height - AXIS_PADDING);
+    ctx.lineTo(ctx.canvas.width - AXIS_PADDING, ctx.canvas.height - AXIS_PADDING);
     ctx.stroke();
 };
 
@@ -114,7 +114,7 @@ const renderPoint = (ctx, x, y) => {
 };
 
 const renderChart = (ctx, points) => {
-    ctx.clearRect(0, 0, canvasElement.width, canvasElement.height);
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
     renderAxis(ctx);
 
     ctx.beginPath();
